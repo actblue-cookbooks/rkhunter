@@ -25,12 +25,3 @@ template "/etc/rkhunter.conf" do
   owner "root"
   group "root"
 end
-
-case value
-when NilClass
-  # skip
-when Array
-  value.join(" ")
-else
-  value.to_s
-end
