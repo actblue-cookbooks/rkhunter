@@ -4,8 +4,10 @@
     action :install
   end
 end
+
 package "rkhunter" do
   action :install
+  notifies :run, "execute[rkhunter database update]", :delayed
 end
 
 template "/etc/default/rkhunter" do
@@ -13,6 +15,7 @@ template "/etc/default/rkhunter" do
   mode 0644
   owner "root"
   group "root"
+  notifies :run, "execute[rkhunter database update]", :delayed
 end
 
 template "/etc/rkhunter.conf.local" do
@@ -20,4 +23,11 @@ template "/etc/rkhunter.conf.local" do
   mode 0644
   owner "root"
   group "root"
+  notifies :run, "execute[rkhunter database update]", :delayed
+end
+
+execute "rkhunter database update" do
+  command "rkhunter --update"
+  user "root"
+  action :nothing
 end
