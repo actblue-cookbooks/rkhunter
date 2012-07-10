@@ -27,7 +27,7 @@ default[:rkhunter][:conf] = {
   :ROTATE_MIRRORS => 0,
   :UPDATE_MIRRORS => 1,
   :MIRRORS_MODE => 0,
-  "MAIL-ON-WARNING" => "",  # (yes, this is hyphens, not underscores)
+  "MAIL-ON-WARNING" => "root",  # (yes, this is hyphens, not underscores)
   :MAIL_CMD => 'mail -s "[rkhunter] Warnings found for ${HOST_NAME}"',
   
   :TMPDIR => "/var/lib/rkhunter/tmp",
