@@ -10,9 +10,9 @@
 <%     # skip -%>
 <%   when Array -%>
 <%     value.sort.each do |v| -%>
-<%=      setting %> <%= v.to_s %>
+<%=      setting %>=<%= v.to_s %>
 <%     end -%>
 <%   else -%>
-<%=    setting %> <%= value.to_s %>
+<%=    setting %>=<%= value.to_s %>
 <%   end -%>
 <% end -%>
