@@ -27,7 +27,7 @@ template "/etc/rkhunter.conf.local" do
 end
 
 execute "rkhunter update" do
-  command "rkhunter --update"
+  command "/etc/cron.weekly/rkhunter"
   user "root"
   action :nothing
 end
