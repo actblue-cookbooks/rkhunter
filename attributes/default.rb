@@ -65,6 +65,8 @@ default[:rkhunter][:conf] = {
                     ],
   :ALLOWHIDDENFILE => [
                       "/dev/.initramfs-tools",
+                       "/dev/.blkid.tab",
+                       "/dev/.blkid.tab.old",
                       ],
   :ALLOWPROCDELFILE => [],
   :ALLOWPROCLISTEN => [],
