@@ -31,3 +31,9 @@ execute "rkhunter update" do
   user "root"
   action :nothing
 end
+
+execute "rkhunter propupd" do
+  command "rkhunter --propupd"
+  user "root"
+  action :nothing
+end
