@@ -26,6 +26,13 @@ template "/etc/rkhunter.conf.local" do
   notifies :run, "execute[rkhunter update]", :delayed
 end
 
+template " /etc/apt/apt.conf.d/90rkhunter" do
+  source "rkhunter.apt.erb"
+  mode 0644
+  owner "root"
+  group "root"
+end  
+
 execute "rkhunter update" do
   command "/etc/cron.weekly/rkhunter"
   user "root"

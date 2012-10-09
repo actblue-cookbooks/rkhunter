@@ -19,6 +19,9 @@ default[:rkhunter][:cron_options] = {
   # Extra options to pass to rkhunter daily cron job
   # see `man rkhunter' for available options
   :RK_OPT => "",
+
+  # apt/dpk should invoke rkhunter to update things
+  APT_AUTOGEN => "yes",
 }
 
 # rkhunter.conf settings. See the example file for docs.
