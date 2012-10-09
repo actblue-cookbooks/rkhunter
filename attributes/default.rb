@@ -21,7 +21,7 @@ default[:rkhunter][:cron_options] = {
   :RK_OPT => "",
 
   # apt/dpk should invoke rkhunter to update things
-  APT_AUTOGEN => "yes",
+  :APT_AUTOGEN => "yes",
 }
 
 # rkhunter.conf settings. See the example file for docs.
