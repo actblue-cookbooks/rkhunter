@@ -63,11 +63,12 @@ default[:rkhunter][:conf] = {
   :ALLOWHIDDENDIR => [
                       "/dev/.static",
                       "/dev/.udev",
-                      "/dev/.udev/.lock-70-persistent-net.rules",
+                      "/dev/.udev/rules.d",
                       "/dev/.initramfs",
                       "/etc/.java",
                      ],
   :ALLOWHIDDENFILE => [
+                       "/dev/.initramfs",
                        "/dev/.initramfs-tools",
                        "/dev/.blkid.tab",
                        "/dev/.blkid.tab.old",
