@@ -63,8 +63,9 @@ default[:rkhunter][:conf] = {
   :ALLOWHIDDENDIR => [
                       "/dev/.static",
                       "/dev/.udev",
-                      "/dev/.udev/rules.d",
                       "/dev/.initramfs",
+                      # Requires Chef 11. There does not appear to be a way to set this in metadata.
+                      node.value_for_platform('ubuntu' => {'10.04' => '/dev/.udev/.lock-70-persistent-net.rules', 'default' => '/dev/.udev/rules.d'}),
                       "/etc/.java",
                      ],
   :ALLOWHIDDENFILE => [
