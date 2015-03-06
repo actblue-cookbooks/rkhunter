@@ -1,2 +1,3 @@
-description "rkhunter"
-version "0.0.1"
+name 'rkhunter'
+description 'rkhunter'
+version '0.0.1'
